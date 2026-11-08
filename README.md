@@ -1,16 +1,36 @@
-# React + Vite
+React + Redux Toolkit Todo App
+A robust, scalable Todo application built with React and Redux Toolkit. This project features full CRUD (Create, Read, Update, Delete) functionality, state-based filtering, and RESTful API integration using Axios and MockAPI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Features
+Global State Management: Utilizes Redux Toolkit (createSlice, configureStore) for predictable state updates without prop drilling.
 
-Currently, two official plugins are available:
+Full CRUD Operations: Add new tasks, edit existing task details, update completion status, and delete tasks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Smart Filtering: View all tasks, or filter them specifically by "Completed" or "Not Completed" statuses.
 
-## React Compiler
+Backend Integration: Configured with Axios to persist data via asynchronous API requests to a MockAPI endpoint.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech Stack
+Frontend Framework: React (Vite)
 
-## Expanding the Oxlint configuration
+State Management: Redux Toolkit & React-Redux
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+HTTP Client: Axios
+
+Styling: Standard CSS
+
+Folder Structure
+Plaintext
+src/
+├── components/
+│   ├── Header.jsx       # Input form for adding new todos
+│   ├── Main.jsx         # Renders the filter controls and TodoCard list
+│   └── TodoCard.jsx     # Individual todo item with edit/delete/status controls
+├── slices/
+│   └── todoSlices.jsx   # Redux Toolkit slice containing state and reducers
+├── store/
+│   └── store.jsx        # Redux store configuration
+├── App.jsx              # Root application component (Handles initial API fetch)
+├── App.css              # App-level styling
+├── main.jsx             # Entry point (Vite setup, Redux Provider, Axios config)
+└── index.css            # Global resets and styling
